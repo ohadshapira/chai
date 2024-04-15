@@ -1,0 +1,81 @@
+.listings {
+  display: flex;
+  height: auto;
+  padding: 20px 20px 20px 0;
+  border-bottom: 1px solid #eee;
+
+  color: #404040;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+
+  z-index: 2;
+}
+
+.marker {
+  cursor: pointer;
+  padding: 0 10px 0 10px;
+  margin-top: 4px;
+  height: 61px;
+  width: 61px;
+  flex-shrink: 0;
+}
+
+.text {
+  margin-top: 2px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.authors {
+  max-width: 100px;
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.paragraph1 {
+  margin: 0 0 3px 0;
+}
+
+.paragraph {
+  margin: 0 0 6px 0;
+}
+
+.paragraph2 {
+  margin: 0;
+}
+
+.title {
+  cursor: pointer;
+  font: 700 16px Rubik, sans-serif;
+}
+
+@media (max-width: 438px) {
+  .listings {
+    height: 100%;
+    padding: 16px 16px 16px 0;
+    border-bottom: 1px solid #eee;
+
+    color: #404040;
+    text-decoration: none;
+
+    z-index: 2;
+  }
+
+  .text {
+    font-size: 13.2px;
+  }
+
+  .marker {
+    padding: 0 8px 0 8px;
+    margin-top: 4px;
+    height: 56px;
+    width: 56px;
+  }
+
+  .title {
+    font-size: 14.5px;
+  }
+}

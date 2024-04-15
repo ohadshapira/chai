@@ -1,0 +1,51 @@
+@import 'leaflet/dist/leaflet.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
+
+html,
+body {
+  margin: 0;
+  background-color: #333;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.leaflet-popup-content {
+  width: 301px;
+  height: 470px;
+}
+
+.custom-marker-cluster {
+  background: rgba(156, 86, 255, 1);
+  border: 4px solid rgba(197, 155, 255, 0.8);
+  border-style: outset;
+  border-radius: 50%;
+  color: white;
+  height: 40px;
+  line-height: 30px;
+  text-align: center;
+  width: 40px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.map {
+  position: relative;
+  z-index: 1;
+}
