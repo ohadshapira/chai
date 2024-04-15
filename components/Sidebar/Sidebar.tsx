@@ -97,7 +97,7 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                 </button> */}
 
                 &nbsp;
-                <a href="https://forms.fillout.com/t/sguWwnb5LVus" target="_blank"
+                <a href="https://forms.fillout.com/t/sguWwnb5LVus" target="_blank" rel="noreferrer"
                   className={getButtonStyle('create')}
                   type={'button'}
                   role="button"
