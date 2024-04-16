@@ -56,20 +56,20 @@ const Marker = ({
               <h1 className={styles.title}>
                 {city}, {country}
               </h1>
+              <span>
+              <h2><AuthorIcon author={author} /> {name}</h2>
+              </span>
               <span className={styles.light}>
                 <i className="bi bi-calendar"></i> {getFullDateString(date)} (
                 {getRelativeTimeString(date)})
               </span>
-              <br />
+              {/* <br />
               <span className={styles.light}>
                 <i className="bi bi-signpost-fill"></i>{' '}
                 {Math.round(getDistance(coordinates))} km away
-              </span>
+              </span> */}
               <br />
-              <span>
-                <AuthorIcon author={author} /> {name}
-              </span>
-              <br/>
+              
               <div>
               <button
                   className={sidebar_styles.button_active}
