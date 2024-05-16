@@ -11,6 +11,12 @@ export const PLACES: IPin[] = [
     date: '1943-07-06',
     photo: '/photos/ohad/moshe_shapira.jpg',
     assistant_id: 'asst_8EKv1eo6JXnpSk4SS3tP63U1',
+    video_object: {
+      'Where did you came from': "/videos/CherryFestival.mp4",
+      'Tell me about your family': "/videos/CherryFestival.mp4",
+      'Tell me about your family 2': "/videos/CherryFestival.mp4",
+      'Tell me about your family 3': "/videos/CherryFestival.mp4",
+    }
   },
   {
     author: 'Zipora Shapira',
@@ -22,6 +28,11 @@ export const PLACES: IPin[] = [
     date: '1946-03-09',
     photo: '/photos/ohad/zipora_shapira.jpg',
     assistant_id: 'asst_8EKv1eo6JXnpSk4SS3tP63U1',
+    video_object: {
+      'Where did you came from': "/videos/CherryFestival.mp4",
+      'Tell me about your family': "/videos/CherryFestival.mp4",
+      'Tell me about your family 3': "/videos/CherryFestival.mp4",
+    }
   },
   {
     author: 'Zohra al-Fassiya',
@@ -33,6 +44,9 @@ export const PLACES: IPin[] = [
     date: '1955-07-01',
     photo: '/photos/ohad/zohara_alfasia.jpg',
     assistant_id: 'asst_5qqocTWRuOp7ovTFOu6G035D',
+    video_object: {
+      'Where did you came from': "/videos/CherryFestival.mp4",
+    }
   },
   {
     author: 'Yedidia Shofet',
@@ -44,6 +58,7 @@ export const PLACES: IPin[] = [
     date: '1951-07-01',
     photo: '/photos/ohad/Yedidia-Shofet.jpg',
     assistant_id: 'asst_9IW7aGDzyMAKST1R4IqpXZ4w',
+    video_object: {}
   },
   {
     author: 'Abba Eban',
@@ -55,6 +70,7 @@ export const PLACES: IPin[] = [
     date: '1929-07-01',
     photo: '/photos/ohad/AbbaEban1951.jpeg',
     assistant_id: 'asst_ITHCRrxKPENuMm5zHCPmLk0o',
+    video_object: {}
   },
 
   {
@@ -67,6 +83,7 @@ export const PLACES: IPin[] = [
     date: '1908-02-11',
     photo: '/photos/ohad/Doctor_Noe_Yarcho_Basavilbaso.png',
     assistant_id: '',
+    video_object: {}
   },
 
   {
@@ -79,6 +96,7 @@ export const PLACES: IPin[] = [
     date: '2016-04-01',
     photo: '/photos/ohad/JessicaMeir.jpg',
     assistant_id: '',
+    video_object: {}
   },
 
   {
@@ -91,6 +109,7 @@ export const PLACES: IPin[] = [
     date: '1980-04-01',
     photo: '/photos/ohad/ShoshanaDamari.jpg',
     assistant_id: '',
+    video_object: {}
   },
   {
     author: 'Abraham Barak Salem',
@@ -102,5 +121,6 @@ export const PLACES: IPin[] = [
     date: '1902-02-01',
     photo: '/photos/ohad/AB_Salem_cochin.png',
     assistant_id: 'asst_oz9ritKiNWnHlOmnjv1sdenr',
+    video_object: {}
   },
 ];
