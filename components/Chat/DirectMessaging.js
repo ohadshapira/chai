@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import {ask_assistant, generateText} from "./ChatGPT";
-import "./direct_messaging.scss";
+import "./messaging.scss";
 
 
 var i=0;
@@ -51,6 +51,7 @@ const DirectMessaging = ({ prompt, maxTokens,community }) => {
   const assistant_id={community}.community.assistant_id.assistant_id;
 
   const scrollToBottom = () => {
+    console.log("current massage",messagesEndRef.current)
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -65,6 +66,7 @@ const DirectMessaging = ({ prompt, maxTokens,community }) => {
 
   const handleUserInputSubmit = async (e) => {
     e.preventDefault();
+    setUserInput("");
     setIsLoading(true);
     setConversation([...conversation, { text: userInput, isUser: true }]);
     scrollToBottom();
@@ -89,7 +91,6 @@ const DirectMessaging = ({ prompt, maxTokens,community }) => {
       { text: response, isUser: false },
     ]);
     setGeneratedText(response);
-    setUserInput("");
     setIsLoading(false);
     scrollToBottom();
   };

@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import DirectMessaging from "../Chat/DirectMessaging";
+import VideoMessaging from "../Chat/VideoMessaging";
 import {update_chat_details} from "../Chat/ChatGPT";
 
 
@@ -26,12 +27,14 @@ const Marker = ({
   author,
   photo,
   date,
-  assistant_id
+  assistant_id,
+  video_object,
 }: IPin) => {
   const icon = getIcon(type);
 
-  const community={'city':{city},'country':{country},'author':{author},'photo':{photo},'assistant_id':{assistant_id}};
+  const community={'city':{city},'country':{country},'author':{author},'photo':{photo},'assistant_id':{assistant_id},'video_object':{video_object}};
   const [open, setOpen] = useState(false);
+  const [ModalType, setModalType] = useState('');
   
   const onOpenModal = (assistant_id) => {
     console.log('o:',assistant_id);
@@ -75,12 +78,21 @@ const Marker = ({
                   className={sidebar_styles.button_active}
                   type={'button'}
                   role="button"
-                  onClick={() =>onOpenModal(assistant_id)}
+                  onClick={() =>{onOpenModal(assistant_id); setModalType("chat")}}
                   disabled={type!=EPinType.Chat}
                   hidden={type!=EPinType.Chat}
                 >
-                  {' '}
-                  Chat <i className="bi bi-chat-dots-fill"></i>{' '}
+                  Chat <i className="bi bi-chat-dots-fill"></i>
+                </button>
+              <button
+                  className={sidebar_styles.button_active}
+                  type={'button'}
+                  role="button"
+                  onClick={() =>{onOpenModal(assistant_id); setModalType("video")}}
+                  disabled={type!=EPinType.Chat}
+                  hidden={type!=EPinType.Chat}
+                >
+                  Video <i className="bi bi-camera-video"></i>
                 </button>
                 
                 <Modal open={open} onClose={onCloseModal} center 
@@ -89,12 +101,24 @@ const Marker = ({
                     modal: styles.customModal,
                   }}
                 >
-
-                  <DirectMessaging
-                    prompt={`You are someone who knows a lot about this place:${name} at ${city}. ${prompt} This message comes from your friend. Be a helpful concierege. If they refer to 'here' it is in reference to this place:${name} at ${city}. If you repeat the address, omit the city, state, country, and zip code.`}
-                    community={community}
-                    maxTokens={5}
-                  />
+                  {
+                    ModalType == 'video' && (
+                      <VideoMessaging
+                      prompt={`You are someone who knows a lot about this place:${name} at ${city}. ${prompt} This message comes from your friend. Be a helpful concierege. If they refer to 'here' it is in reference to this place:${name} at ${city}. If you repeat the address, omit the city, state, country, and zip code.`}
+                      community={community}
+                      maxTokens={5}
+                    />
+                    )
+                  }
+                  {
+                    ModalType == 'chat' && (
+                      <DirectMessaging
+                      prompt={`You are someone who knows a lot about this place:${name} at ${city}. ${prompt} This message comes from your friend. Be a helpful concierege. If they refer to 'here' it is in reference to this place:${name} at ${city}. If you repeat the address, omit the city, state, country, and zip code.`}
+                      community={community}
+                      maxTokens={5}
+                    />
+                    )
+                  }
                 </Modal>
               </div>
             </div>
