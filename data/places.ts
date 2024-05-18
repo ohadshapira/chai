@@ -326,7 +326,7 @@ export const PLACES: IPin[] = [
     country: 'Japan',
     coordinates: [35.6684103,139.57606],
     date: '2007-06-12',
-    photo: '/photos/ohad/SarahAbramovich.png',
+    photo: '/photos/ohad/YukiCohen.png',
     assistant_id: '',
     video_object: {
       'Who are you?': "/videos/Who are you_ - Yuki Cohen.mp4",
