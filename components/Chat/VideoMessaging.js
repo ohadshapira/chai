@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import {ask_assistant, generateText} from "./ChatGPT";
 import "./messaging.scss";
-import {videos} from "../../data/videos";
 
 const Conversation = ({ messages, messagesEndRef }) => (
   <div className="messages-content">

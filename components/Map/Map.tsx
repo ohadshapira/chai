@@ -17,16 +17,16 @@ function filterPins(pins: IPin[], { name, type, checked }: IFilter) {
   return (
     <LayersControl.Overlay checked={checked} name={name}>
       <LayerGroup>
-        <MarkerClusterGroup
+        {/* <MarkerClusterGroup
           iconCreateFunction={createClusterCustomIcon}
           showCoverageOnHover={false}
-        >
+        > */}
           {pins
             .filter((pin: IPin) => pin.type === type)
             .map((pin: IPin) => (
               <Marker key={`${pin.coordinates}-${pin.author}`} {...pin} />
             ))}
-        </MarkerClusterGroup>
+        {/* </MarkerClusterGroup> */}
       </LayerGroup>
     </LayersControl.Overlay>
   );

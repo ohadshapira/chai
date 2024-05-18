@@ -17,4 +17,5 @@ export interface IPin {
   streetview?: string;
   assistant_id?: string;
   video_object?: { [key: string]: string };
+  details?:string;
 }

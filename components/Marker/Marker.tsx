@@ -89,8 +89,8 @@ const Marker = ({
                   type={'button'}
                   role="button"
                   onClick={() =>{onOpenModal(assistant_id); setModalType("video")}}
-                  disabled={type!=EPinType.Chat}
-                  hidden={type!=EPinType.Chat}
+                  disabled={type!=EPinType.Video}
+                  hidden={type!=EPinType.Video}
                 >
                   Video <i className="bi bi-camera-video"></i>
                 </button>

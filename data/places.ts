@@ -3,6 +3,7 @@ import { IPin, EPinType } from '~/lib/types';
 export const PLACES: IPin[] = [
   {
     author: 'Moshe Shapira',
+    details:'Ohad\'s Shapira Grandfather',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Fălticeni',
@@ -20,6 +21,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Zipora Shapira',
+    details:'Ohad\'s Shapira Grandmother',
     username: 'ohad',
     type: EPinType.Picture,
     city: 'Casablanca',
@@ -28,14 +30,11 @@ export const PLACES: IPin[] = [
     date: '1946-03-09',
     photo: '/photos/ohad/zipora_shapira.jpg',
     assistant_id: 'asst_8EKv1eo6JXnpSk4SS3tP63U1',
-    video_object: {
-      'Where did you came from': "/videos/CherryFestival.mp4",
-      'Tell me about your family': "/videos/CherryFestival.mp4",
-      'Tell me about your family 3': "/videos/CherryFestival.mp4",
-    }
+    video_object: {    }
   },
   {
     author: 'Zohra al-Fassiya',
+    details:'Moroccan singer and poet',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Sefrou',
@@ -45,11 +44,13 @@ export const PLACES: IPin[] = [
     photo: '/photos/ohad/zohara_alfasia.jpg',
     assistant_id: 'asst_5qqocTWRuOp7ovTFOu6G035D',
     video_object: {
-      'Where did you came from': "/videos/CherryFestival.mp4",
+      'Where did you came from?': "/videos/CherryFestival.mp4",
+      'Where did you came from?22': "/videos/CherryFestival.mp4",
     }
   },
   {
     author: 'Yedidia Shofet',
+    details:'Former Chief Rabbi of Iran and the worldwide spiritual leader of Persian Jewry',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Kashan',
@@ -62,6 +63,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Abba Eban',
+    details:'South African-born Israeli diplomat and politician, and a scholar of the Arabic and Hebrew languages.',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Cape Town',
@@ -73,8 +75,39 @@ export const PLACES: IPin[] = [
     video_object: {}
   },
 
+
+  {
+    author: 'Zsigmond Krausz',
+    details:'Journalist and Orthodox communal worker',
+    username: 'ohad',
+    type: EPinType.Chat,
+    city: 'Gyorsziget',
+    country: 'Hungary',
+    coordinates: [47.6889523,17.6099823],
+    date: '1830-02-01',
+    photo: '/photos/ohad/Zsigmond_Krausz.jpg',
+    assistant_id: 'asst_TIhWynEzXIwexGrrkfSUDyjd',
+    video_object: {}
+  },
+
+  {
+    author: 'Mordechai Gebirtig',
+    details:'Influential Polish Jewish poet and songwriter of the interwar period',
+    username: 'ohad',
+    type: EPinType.Chat,
+    city: 'Krakow',
+    country: 'Poland',
+    coordinates: [50.0469811,19.9223922],
+    date: '1897-01-04',
+    photo: '/photos/ohad/Mordechaj_Gebirtig.jpg',
+    assistant_id: 'asst_C3w7yHapqwbfRa19cJ3hj1Ys',
+    video_object: {}
+  },
+
+
   {
     author: 'Doctor Noé Yarcho',
+    details:'Doctor of the jewish colonies in Argentina',
     username: 'ohad',
     type: EPinType.Picture,
     city: 'Basavilbaso',
@@ -87,7 +120,8 @@ export const PLACES: IPin[] = [
   },
 
   {
-    author: 'Jessica Meir',
+    author: 'Jessica Ulrika Meir',
+    details:'American NASA astronaut, marine biologist, and physiologist.',
     username: 'ohad',
     type: EPinType.Picture,
     city: 'Caribou',
@@ -101,6 +135,7 @@ export const PLACES: IPin[] = [
 
   {
     author: 'Shoshana Damari',
+    details:'Yemeni-Israeli singer known as the "Queen of Hebrew Music."',
     username: 'ohad',
     type: EPinType.Picture,
     city: 'Dhamar',
@@ -112,7 +147,60 @@ export const PLACES: IPin[] = [
     video_object: {}
   },
   {
+    author: 'Israël Lévi',
+    details:'Scholar and chief rabbi of France',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Paris',
+    country: 'France',
+    coordinates: [48.8591056,2.2646348],
+    date: '1856-07-07',
+    photo: '/photos/ohad/Israel_lavi_paris.jpg',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Henny Eman',
+    details:'1st Prime Minister of Aruba',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Oranjestad',
+    country: 'Aruba',
+    coordinates: [12.5082899,-70.0132397],
+    date: '1986-03-20',
+    photo: '/photos/ohad/Henny_Eman_(1986).jpg',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Rudolph de Cordova',
+    details:'Jamaican-born British writer, screenwriter and actor',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Kingston',
+    country: 'Jamaica',
+    coordinates: [18.0179363,-76.8006563],
+    date: '1916-02-10',
+    photo: '/photos/ohad/Rudolph_de_Cordova_1916.jpg',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Eric Berne',
+    details:'Psychiatrist who created the theory of transactional analysis as a way of explaining human behavior',
+    username: 'ohad',
+    type: EPinType.Chat,
+    city: 'Montreal',
+    country: 'Canada',
+    coordinates: [45.5591827,-73.7118733],
+    date: '1992-02-01',
+    photo: '/photos/ohad/Eric_Berne_1969.jpg',
+    assistant_id: 'asst_9hVjC6akz6o2pLsA2PHnkFIY',
+    video_object: {}
+  },
+  {
     author: 'Abraham Barak Salem',
+    details:'Indian nationalist and Zionist, a lawyer and politician, and one of the most prominent Cochin Jews of the twentieth century. ',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Kochi',
@@ -121,6 +209,58 @@ export const PLACES: IPin[] = [
     date: '1902-02-01',
     photo: '/photos/ohad/AB_Salem_cochin.png',
     assistant_id: 'asst_oz9ritKiNWnHlOmnjv1sdenr',
+    video_object: {}
+  },
+  {
+    author: 'Arturo Warman',
+    details:'Mexican anthropologist, member of the cabinets of Carlos Salinas and Ernesto Zedillo, also an author of nine books',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Mexico City',
+    country: 'Mexico',
+    coordinates: [19.3907336,-99.1436127],
+    date: '1955-06-12',
+    photo: '/photos/ohad/Arturo_Warman.jpg',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Roy Clive Abraham',
+    details:'A key figure in African language scholarship during the twentieth century',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Melbourne',
+    country: 'Australia',
+    coordinates: [-37.9725665,145.0531353],
+    date: '1912-06-12',
+    photo: '/photos/ohad/RoyCliveAbraham.png',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Yosef Ben-Jochannan',
+    details:' American writer and historian',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Gondar',
+    country: 'Ethiopia',
+    coordinates: [12.6011276,37.4564481],
+    date: '1942-06-12',
+    photo: '/photos/ohad/Yosef Ben-Jochannan.jpg',
+    assistant_id: '',
+    video_object: {}
+  },
+  {
+    author: 'Israel Somen',
+    details:' Kenyan politician businessman and diplomat',
+    username: 'ohad',
+    type: EPinType.Picture,
+    city: 'Nairobi ',
+    country: 'Kenya',
+    coordinates: [-1.303209,36.8473969],
+    date: '1948-06-12',
+    photo: '/photos/ohad/IsraelSomen.png',
+    assistant_id: '',
     video_object: {}
   },
 ];
