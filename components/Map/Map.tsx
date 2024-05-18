@@ -41,7 +41,7 @@ export default function Map({ pins, setMapRef }: Props) {
   return (
     <MapContainer
       center={[32.0624722,34.7803319]}
-      zoom={3.4}
+      zoom={3.2}
       scrollWheelZoom={true}
       style={{ height: '100vh' }}
       zoomControl={false}

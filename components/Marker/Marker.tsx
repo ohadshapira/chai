@@ -25,6 +25,7 @@ const Marker = ({
   city,
   country,
   author,
+  details,
   photo,
   date,
   assistant_id,
@@ -32,7 +33,7 @@ const Marker = ({
 }: IPin) => {
   const icon = getIcon(type);
 
-  const community={'city':{city},'country':{country},'author':{author},'photo':{photo},'assistant_id':{assistant_id},'video_object':{video_object}};
+  const community={'city':{city},'country':{country},'author':{author},'details':{details},'photo':{photo},'assistant_id':{assistant_id},'video_object':{video_object}};
   const [open, setOpen] = useState(false);
   const [ModalType, setModalType] = useState('');
   
@@ -61,6 +62,9 @@ const Marker = ({
               </h1>
               <span>
               <h2><AuthorIcon author={author} /> {name}</h2>
+              </span>
+              <span>
+              <h3><i className="bi bi-info-square"></i> {details}</h3>
               </span>
               <span className={styles.light}>
                 <i className="bi bi-calendar"></i> {getFullDateString(date)} (

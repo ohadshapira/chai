@@ -3,7 +3,7 @@ import { IPin, EPinType } from '~/lib/types';
 export const PLACES: IPin[] = [
   {
     author: 'Moshe Shapira',
-    details:'Ohad\'s Shapira Grandfather',
+    details:'Manager at the Volcani Institute - Agricultural Research Organization\nOhad\'s Grandfather',
     username: 'ohad',
     type: EPinType.Chat,
     city: 'Fălticeni',
@@ -21,7 +21,7 @@ export const PLACES: IPin[] = [
   },
   {
     author: 'Zipora Shapira',
-    details:'Ohad\'s Shapira Grandmother',
+    details:'Business owner - Tailor. \n Ohad\'s Grandmother',
     username: 'ohad',
     type: EPinType.Picture,
     city: 'Casablanca',
@@ -262,5 +262,96 @@ export const PLACES: IPin[] = [
     photo: '/photos/ohad/IsraelSomen.png',
     assistant_id: '',
     video_object: {}
+  },
+  {
+    author: 'Isaac Levi',
+    details:'3rd generation tailor from Naples (f)',
+    username: 'ohad',
+    type: EPinType.Video,
+    city: 'Naples',
+    country: 'Italy',
+    coordinates: [40.854034,14.3290028],
+    date: '1968-06-12',
+    photo: '/photos/ohad/IsaacLevi.png',
+    assistant_id: '',
+    video_object: {
+      'Who are you?': "/videos/Who are you - Isaac Levi.mp4",
+      'What is your favourite family traditions?': "/videos/What is your favourite family traditions - Isaac Levi.mp4",
+      'What is your day look like?': "/videos/What is your day look like - Isaac Levi.mp4",
+    }
+  },
+
+  {
+    author: 'Miriam Cohen',
+    details:'Local Hebrew school teacher (f)',
+    username: 'ohad',
+    type: EPinType.Video,
+    city: 'Pretoria',
+    country: 'South Africa',
+    coordinates: [-25.7582479,28.3627586],
+    date: '1998-06-12',
+    photo: '/photos/ohad/MiriamCohen.png',
+    assistant_id: '',
+    video_object: {
+      'Hi, tell me about yourself': "/videos/Hi tell me about yourself- Miriam Cohen.mp4",
+      'What do you teach?': "/videos/What do you teach - Miriam Cohen.mp4",
+      'Tell me about your synagogue': "/videos/Tell me about your synagogue - Miriam Cohen.mp4",
+    }
+  },
+
+  {
+    author: 'Sarah Abramovich', //ava kiev market
+    details:'Worker at the local market, selling fruits and vegetables (f)',
+    username: 'ohad',
+    type: EPinType.Video,
+    city: 'Kiev',
+    country: 'Ukraine',
+    coordinates: [50.4020355,30.5326905],
+    date: '2012-06-12',
+    photo: '/photos/ohad/SarahAbramovich.png',
+    assistant_id: '',
+    video_object: {
+      'Who are you?': "/videos/Who are you - SarahAbramovich.mp4",
+      'Tell me about a memorable Jewish tradition you observe': "/videos/Tell me about a memorable Jewish tradition you observe - SarahAbramovich.mp4",
+      'Have you faced any challenges as a Jew in Kiev?': "/videos/Have you faced any challenges as a Jew in Kiev -SarahAbramovich.mp4",
+      'What is the Jewish community like in Kiev?': "/videos/What is the Jewish community like in Kiev - SarahAbramovich.mp4",
+    }
+  },
+  {
+    author: 'Yuki Cohen', //amber / tokyo street
+    details:'Work at a local technology company (f)',
+    username: 'ohad',
+    type: EPinType.Video,
+    city: 'Tokyo',
+    country: 'Japan',
+    coordinates: [35.6684103,139.57606],
+    date: '2007-06-12',
+    photo: '/photos/ohad/SarahAbramovich.png',
+    assistant_id: '',
+    video_object: {
+      'Who are you?': "/videos/Who are you_ - Yuki Cohen.mp4",
+      'What is your daily life like?': "/videos/What is your daily life like_ - Yuki Cohen.mp4",
+      'What is the Jewish community like in Tokyo?': "/videos/What is the Jewish community like in Tokyo_  - Yuki Cohen.mp4",
+      'What unique customs do you observe in Tokyo?': "/videos/What unique customs or practices do you observe as a Jewish person in Tokyo_ - yuki.mp4",
+    }
+  },
+
+  {
+    author: 'Diego Gutierrez', //Brian / Lima beach peru
+    details:'A student at University of Lima (f)',
+    username: 'ohad',
+    type: EPinType.Video,
+    city: 'Lima',
+    country: 'Peru',
+    coordinates: [-12.0266383,-76.9877791],
+    date: '2018-06-12',
+    photo: '/photos/ohad/DiegoGutierrez.png',
+    assistant_id: '',
+    video_object: {
+      'Hello': "/videos/Hi - Diego Gutierrez.mp4",
+      'How has being Jewish influenced your life in Lima?': "/videos/How has being Jewish influenced your life in Lima_ - Diego Gutierrez.mp4",
+      'What moment made you proud of your Jewish roots?': "/videos/What moment made you proud of your Jewish roots_.mp4",
+      'What is it like being part of the Jewish community in Lima?': "/videos/What is it like being part of the Jewish community in Lima - Diego Gutierrez.mp4",
+    }
   },
 ];
