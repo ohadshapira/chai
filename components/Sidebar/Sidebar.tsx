@@ -8,6 +8,8 @@ import { CSSTransition } from 'react-transition-group';
 import Leaderboard from '~/components/Leaderboard';
 import { Props, ESortKeys, ESortDirection } from './types';
 import { sortingFunctions, changeVariables } from './utils';
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
 
 export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
   const [locations, setLocations] = useState<boolean>(true);
@@ -17,6 +19,7 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
   const [sortDirection, setSortDirection] = useState<ESortDirection>(
     ESortDirection.Ascending
   );
+  const [showModal, setShowModal] = useState<boolean>(false)
 
   const sortedPins = useMemo(
     () => pins.sort(sortingFunctions(sortKey, sortDirection)),
@@ -45,7 +48,20 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
   };
 
   return (
-    <CSSTransition
+    <>
+      <Modal open={showModal} onClose={() => setShowModal(false)} center>
+        <div className={styles.modal_container}>
+          <div className={styles.modal_header}>Create Your Person</div>
+          <div className={styles.modal_paragraph}>Please fill out the form and we will send you an email with the instructions</div>
+          <form className={styles.modal_form}>
+            <input className={styles.modal_form_input} type="text" placeholder="First Name" required />
+            <input className={styles.modal_form_input} type="text" placeholder="Last Name" required />
+            <input className={styles.modal_form_input} type="email" placeholder="Email" required />
+            <button className={styles.modal_form_button} type="submit">Submit</button>
+          </form>
+        </div>
+      </Modal>
+      <CSSTransition
       in={isOpen}
       timeout={500}
       classNames={{
@@ -97,15 +113,13 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
                 </button> */}
 
                 &nbsp;
-                <a href="https://forms.fillout.com/t/sguWwnb5LVus" target="_blank" rel="noreferrer"
-                  className={getButtonStyle('create')}
-                  type={'button'}
-                  role="button"
-                  
+                <div
+                  onClick={() => { setShowModal(true); }}
+                  className={getButtonStyle('create')}                  
                 >
                   {' '}
-                  Create <i className="bi bi-pen-fill"></i>{' '}
-                </a>
+                  Create<i className="bi bi-pen-fill"></i>{' '}
+                </div>
                 <br></br>
               </div>
             </div>
@@ -180,6 +194,7 @@ export default function Sidebar({ pins, isOpen, setOpen, mapRef }: Props) {
           </CSSTransition>
         </div>
       </div>
-    </CSSTransition>
+     </CSSTransition>
+    </>
   );
 }
